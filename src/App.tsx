@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import AnimatedIcons from './components/AnimatedIcons'
 import { WhatWeDo } from './components/WhatWeDo'
 import { AboutUs } from './components/AboutUs'
+import { Portfolio } from './components/Portf'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <AnimatedIcons/>
       <WhatWeDo/>
       <AboutUs/>
+      <Portfolio/>
       <Footer/>
     </>
 
