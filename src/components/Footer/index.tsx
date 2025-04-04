@@ -3,7 +3,7 @@ import { FaWhatsapp, FaPhone, FaEnvelope, FaGithub, FaLinkedin } from "react-ico
 
 export default function Footer() {
   return (
-    <Box bg="purple.900" color="white" py={6}>
+    <Box bg="#250147" color="white" py={6}>
       <Container maxW="6xl">
         <Stack direction={{ base: "column", md: "row" }} justify="space-between" spacing={6} align="center">
           {/* Logo e descrição */}

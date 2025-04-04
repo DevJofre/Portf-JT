@@ -7,6 +7,7 @@ import { WhatWeDo } from './components/WhatWeDo'
 import { AboutUs } from './components/AboutUs'
 import { Portfolio } from './components/Portf'
 import { FAQ } from './components/FAQ'
+import { ContactForm } from './components/ContactUs'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <AboutUs/>
       <Portfolio/>
       <FAQ/>
+      <ContactForm/>
       <Footer/>
     </>
 
