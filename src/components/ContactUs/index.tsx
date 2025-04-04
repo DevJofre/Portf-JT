@@ -40,7 +40,7 @@ export function ContactForm() {
           </Flex>
           <Flex align="center">
             <Icon as={FaLinkedin} w={5} h={5} color="pink.400" mr={2} />
-            <Text>Jofre Tomas</Text>
+            <Text></Text>
           </Flex>
         </Box>
       </Box>
@@ -59,22 +59,22 @@ export function ContactForm() {
         <Grid templateColumns="repeat(2, 1fr)" gap={3}>
           <FormControl>
             <FormLabel>Nome</FormLabel>
-            <Input placeholder="Nome" bg="transparent" border="1px solid white" />
+            <Input placeholder="Nome" bg="transparent" border="1px solid white" borderRadius="full" />
           </FormControl>
           <FormControl>
             <FormLabel>Telefone</FormLabel>
-            <Input type="tel" placeholder="Digite Seu Telefone" bg="transparent" border="1px solid white" />
+            <Input type="tel" placeholder="Digite Seu Telefone" bg="transparent" border="1px solid white" borderRadius="full" />
           </FormControl>
         </Grid>
 
         <Grid templateColumns="repeat(2, 1fr)" gap={3} mt={3}>
           <FormControl>
             <FormLabel>E-mail</FormLabel>
-            <Input type="email" placeholder="E-mail" bg="transparent" border="1px solid white" />
+            <Input type="email" placeholder="E-mail" bg="transparent" border="1px solid white" borderRadius="full" />
           </FormControl>
           <FormControl>
             <FormLabel>Tipo de Serviço</FormLabel>
-            <Select bg="transparent" border="1px solid white">
+            <Select bg="transparent" border="1px solid white" borderRadius="full">
               <option value="site">Criação de Site</option>
               <option value="loja">Loja Virtual</option>
               <option value="marketing">Marketing Digital</option>
@@ -85,10 +85,10 @@ export function ContactForm() {
 
         <FormControl mt={3}>
           <FormLabel>Mensagem</FormLabel>
-          <Textarea placeholder="Como posso te ajudar?" bg="transparent" border="1px solid white" />
+          <Textarea placeholder="Como posso te ajudar?" bg="transparent" border="1px solid white"  />
         </FormControl>
 
-        <Button bg="pink.500" color="white" w="100%" mt={4} _hover={{ bg: "pink.600" }}>
+        <Button bg="pink.500" color="white" borderRadius="full" w="100%" mt={4} _hover={{ bg: "pink.600" }}>
           Enviar
         </Button>
       </Box>
