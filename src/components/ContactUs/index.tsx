@@ -41,7 +41,7 @@ export function ContactForm() {
           <Flex align="center">
             <Icon as={FaLinkedin} w={5} h={5} color="pink.400" mr={2} />
             <Text>
-              <Link href="https://www.linkedin.com/in/jofretomas" isExternal color="pink.300" fontWeight="bold">
+              <Link href="https://www.linkedin.com/in/jofre-tomas-811113197/" isExternal color="pink.300" fontWeight="bold">
                 JofreTomas
               </Link>
             </Text>
