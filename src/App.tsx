@@ -6,6 +6,7 @@ import AnimatedIcons from './components/AnimatedIcons'
 import { WhatWeDo } from './components/WhatWeDo'
 import { AboutUs } from './components/AboutUs'
 import { Portfolio } from './components/Portf'
+import { FAQ } from './components/FAQ'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <WhatWeDo/>
       <AboutUs/>
       <Portfolio/>
+      <FAQ/>
       <Footer/>
     </>
 
