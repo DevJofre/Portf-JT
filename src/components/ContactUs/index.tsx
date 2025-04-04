@@ -1,4 +1,4 @@
-import { Box, Button, Flex, FormControl, FormLabel, Input, Select, Textarea, Heading, Text, Icon, Grid } from "@chakra-ui/react";
+import { Box, Button, Flex, FormControl, FormLabel, Input, Select, Textarea, Heading, Text, Icon, Grid, Link } from "@chakra-ui/react";
 import { FaWhatsapp, FaPhone, FaEnvelope, FaLinkedin } from "react-icons/fa";
 
 export function ContactForm() {
@@ -40,7 +40,11 @@ export function ContactForm() {
           </Flex>
           <Flex align="center">
             <Icon as={FaLinkedin} w={5} h={5} color="pink.400" mr={2} />
-            <Text></Text>
+            <Text>
+              <Link href="https://www.linkedin.com/in/jofretomas" isExternal color="pink.300" fontWeight="bold">
+                JofreTomas
+              </Link>
+            </Text>
           </Flex>
         </Box>
       </Box>
