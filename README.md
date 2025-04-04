@@ -1,3 +1,3 @@
 # React + TypeScript + Vite
 
-Jofre Tomas
+Jofre Tomas Almeida
