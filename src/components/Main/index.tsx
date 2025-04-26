@@ -4,7 +4,7 @@ function Main() {
   return (
     <Flex 
       backgroundImage="url('/bannerhome.png')"
-      backgroundSize="content" 
+      backgroundSize="cover" 
       backgroundPosition="center top" 
       backgroundRepeat="no-repeat"
       align="center"

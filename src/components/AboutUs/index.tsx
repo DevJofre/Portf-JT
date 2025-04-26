@@ -5,7 +5,7 @@ export function AboutUs () {
   return (
     <Flex 
       backgroundImage="url('/bannerhome2.0.png')"
-      backgroundSize="content" 
+      backgroundSize="cover" 
       backgroundPosition="center top" 
       backgroundRepeat="no-repeat"
       align="center"

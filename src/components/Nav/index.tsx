@@ -1,38 +1,59 @@
 import { useState } from "react";
-import { Flex, Image, Text, IconButton, Button } from "@chakra-ui/react";
+import { Flex, Image, Text, Button, useMediaQuery } from "@chakra-ui/react";
 import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
-import { Menu } from "lucide-react";
+import { IoClose } from "react-icons/io5";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { SocialIcon } from "../ButtonIcons/buttonIcon";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSmallerThan870] = useMediaQuery("(max-width: 870px)");
 
   return (
     <Flex 
       as="nav"
       align="center"
-      justify="center"
+      justify="space-between"
       wrap="wrap"
       padding="1rem 2rem"
       bg="#301c3f"
       color="white"
-      gap="9"
+      position="relative"
     >
       {/* Logo */}
       <Image src="logo3.0.png" alt="Ícone JT" width="150px" height="50px" objectFit="contain" />
-      
+
+      {/* Botão Sanduíche */}
+      <Button
+        onClick={() => setIsOpen(!isOpen)}
+        bg="transparent"
+        _hover={{ bg: "whiteAlpha.300" }}
+        position="absolute"
+        top="1.5rem"
+        right="2rem"
+        zIndex="10"
+        display={isSmallerThan870 ? "block" : "none"} 
+        color="white" 
+        border="1px" 
+        borderColor="white" 
+      >
+        {isOpen ? <IoClose size={24} /> : <RxHamburgerMenu size={30} />}
+      </Button>
+
       {/* Links de Navegação */}
       <Flex 
         align="center" 
         gap="4" 
-        display={{ base: isOpen ? "flex" : "none", md: "flex" }}
-        flexDirection={{ base: "column", md: "row" }}
-        position={{ base: "absolute", md: "static" }}
-        top={{ base: "60px", md: "auto" }}
+        display={!isSmallerThan870 || isOpen ? "flex" : "none"} 
+        flexDirection={isSmallerThan870 ? "column" : "row"}
+        position={isSmallerThan870 ? "absolute" : "static"}
+        top={isSmallerThan870 ? "60px" : "auto"}
         left={0}
-        width={{ base: "100%", md: "auto" }}
-        bg={{ base: "#301c3f", md: "transparent" }}
-        p={{ base: 4, md: 0 }}
+        width={isSmallerThan870 ? "100%" : "auto"}
+        bg={isSmallerThan870 ? "#301c3f" : "transparent"}
+        p={isSmallerThan870 ? 4 : 0}
         justify="center"
+        zIndex="9"
       >
         <Text cursor="pointer" _hover={{ color: "gray.400" }}>INÍCIO</Text>
         <Text cursor="pointer" _hover={{ color: "gray.400" }}>SOBRE</Text>
@@ -41,25 +62,27 @@ export function Navbar() {
         <Text cursor="pointer" _hover={{ color: "gray.400" }}>CONTATO</Text>
         <Text cursor="pointer" _hover={{ color: "gray.400" }}>FAQ</Text>
       </Flex>
-      
+
       {/* Ícones das redes sociais */}
-      <Flex align="center" gap="2">
-        <IconButton as="a" href="https://www.linkedin.com/in/seu-perfil" aria-label="LinkedIn" icon={<FaLinkedin fontSize="1.5rem" />} size="md" colorScheme="purple" isRound />
-        <IconButton as="a" href="https://github.com/seu-usuario" aria-label="GitHub" icon={<FaGithub fontSize="1.5rem" />} size="md" colorScheme="purple" isRound />
-        <IconButton as="a" href="https://wa.me/seu-numero" aria-label="WhatsApp" icon={<FaWhatsapp fontSize="1.5rem" />} size="md" colorScheme="purple" isRound />
-      </Flex>
-      
-      {/* Botão Sanduíche */}
-      <Button
-        display={{ base: "block", md: "none" }}
-        onClick={() => setIsOpen(!isOpen)}
-        bg="transparent"
-        _hover={{ bg: "whiteAlpha.300" }}
-        position="absolute"
-        right="2rem"
-      >
-        <Menu size={24} />
-      </Button>
+      {!isSmallerThan870 && (
+        <Flex align="center" gap="2">
+          <SocialIcon
+            href="https://www.linkedin.com/in/seu-perfil"
+            icon={<FaLinkedin fontSize="1.5rem" />}
+            label="LinkedIn"
+          />
+          <SocialIcon
+            href="https://github.com/seu-usuario"
+            icon={<FaGithub fontSize="1.5rem" />} 
+            label="GitHub"
+          />
+          <SocialIcon
+            href="https://wa.me/seu-numero"
+            icon={<FaWhatsapp fontSize="1.5rem" />} 
+            label="WhatsApp"
+          />
+        </Flex>
+      )}
     </Flex>
   );
 }
