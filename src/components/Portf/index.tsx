@@ -102,6 +102,7 @@ export function Portfolio() {
           boxShadow="md"
           textAlign="center"
           p={4}
+          mx="auto"
           role="group"
         >
           <Box w="100%" h="100%" overflow="hidden" position="relative">
