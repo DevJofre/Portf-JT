@@ -33,6 +33,7 @@ export function AboutUs () {
           variant="outline"
           colorScheme="purple"
           mb={4}
+          fontSize={{ base: "sm", md: "md" }}
         >
           Seu parceiro para uma presença digital de sucesso!
         </Button>
@@ -55,7 +56,7 @@ export function AboutUs () {
       </Box>
 
       {/* Imagem - Ajustado para tamanhos responsivos */}
-      <Box maxW={{ base: "300px", md: "400px" }} width="100%">
+      <Box maxW={{ base: "300px", md: "400px" }} width="100%" display={{ base: "none", md: "block" }}>
         <Image 
           src="jofre.png" 
           alt="Foto do Desenvolvedor de braços cruzados" 
