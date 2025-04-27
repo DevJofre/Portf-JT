@@ -14,15 +14,24 @@ const icons = [
 
 export default function AnimatedIcons() {
   return (
-    <Flex 
-      justify="center" 
-      align="center" 
-      bg="#250147" 
-      gap={2} 
+    <Flex
+      justify="center"
+      align="center"
+      bg="#250147"
       overflow="hidden"
-      paddingY={2}
+      py={2}
+      w="100%"
+      position="relative"
     >
-      <Flex gap={4}>
+      <motion.div
+        style={{ display: "flex", gap: "2rem", whiteSpace: "nowrap" }}
+        animate={{ x: ["100%", "-100%"] }}
+        transition={{
+          repeat: Infinity,
+          duration: 30,
+          ease: "linear",
+        }}
+      >
         {icons.map((icon, index) => (
           <motion.img
             key={index}
@@ -30,13 +39,10 @@ export default function AnimatedIcons() {
             alt="icon"
             width={50}
             height={50}
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.1, ease: "linear" }}
             whileHover={{ scale: 1.2, rotate: 10 }}
           />
         ))}
-      </Flex>
+      </motion.div>
     </Flex>
   );
 }
