@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Flex, Image, Text, Button, useMediaQuery } from "@chakra-ui/react";
+import { Flex, Image, Button, useMediaQuery } from "@chakra-ui/react";
 import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { SocialIcon } from "../ButtonIcons/buttonIcon";
+import { NavItem } from "../NavItem/intex"; // ajuste o caminho conforme seu projeto
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,12 +56,12 @@ export function Navbar() {
         justify="center"
         zIndex="9"
       >
-        <Text cursor="pointer" _hover={{ color: "gray.400" }}>INÍCIO</Text>
-        <Text cursor="pointer" _hover={{ color: "gray.400" }}>SOBRE</Text>
-        <Text cursor="pointer" _hover={{ color: "gray.400" }}>PORTFÓLIO</Text>
-        <Text cursor="pointer" _hover={{ color: "gray.400" }}>PERGUNTAS</Text>
-        <Text cursor="pointer" _hover={{ color: "gray.400" }}>CONTATO</Text>
-        <Text cursor="pointer" _hover={{ color: "gray.400" }}>FAQ</Text>
+        <NavItem>INÍCIO</NavItem>
+        <NavItem>SOBRE</NavItem>
+        <NavItem>PORTFÓLIO</NavItem>
+        <NavItem>PERGUNTAS</NavItem>
+        <NavItem>CONTATO</NavItem>
+        <NavItem>FAQ</NavItem>
       </Flex>
 
       {/* Ícones das redes sociais */}
