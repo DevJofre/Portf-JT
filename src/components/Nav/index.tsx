@@ -68,17 +68,17 @@ export function Navbar() {
       {!isSmallerThan870 && (
         <Flex align="center" gap="2">
           <SocialIcon
-            href="https://www.linkedin.com/in/seu-perfil"
+            href="https://www.linkedin.com/in/jofre-tomas-811113197/"
             icon={<FaLinkedin fontSize="1.5rem" />}
             label="LinkedIn"
           />
           <SocialIcon
-            href="https://github.com/seu-usuario"
+            href="https://github.com/DevJofre"
             icon={<FaGithub fontSize="1.5rem" />} 
             label="GitHub"
           />
           <SocialIcon
-            href="https://wa.me/seu-numero"
+            href="https://w.app/shcgkt"
             icon={<FaWhatsapp fontSize="1.5rem" />} 
             label="WhatsApp"
           />

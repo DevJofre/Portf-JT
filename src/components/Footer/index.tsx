@@ -1,5 +1,6 @@
-import { Box, Container, Stack, Text, Link, IconButton, HStack, Image } from "@chakra-ui/react";
+import { Box, Container, Stack, Text, Link, HStack, Image } from "@chakra-ui/react";
 import { FaWhatsapp, FaPhone, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import { SocialIcon } from "../ButtonIcons/buttonIcon";
 
 export default function Footer() {
   return (
@@ -44,9 +45,21 @@ export default function Footer() {
           <Stack spacing={2} align="center">
             <Text fontSize="lg" fontWeight="bold">SIGA-NOS</Text>
             <HStack spacing={2}>
-              <IconButton as="a" href="https://github.com/DevJofre" aria-label="GitHub" icon={<FaGithub fontSize="1.5rem" />} size="md" colorScheme="purple" isRound />
-              <IconButton as="a" href="https://www.linkedin.com/in/jofre-tomas-811113197/" aria-label="LinkedIn" icon={<FaLinkedin fontSize="1.5rem" />} size="md" colorScheme="purple" isRound />
-              <IconButton as="a" href="#" aria-label="WhatsApp" icon={<FaWhatsapp fontSize="1.5rem" />} size="md" colorScheme="purple" isRound />
+              <SocialIcon
+                href="https://www.linkedin.com/in/jofre-tomas-811113197/"
+                icon={<FaLinkedin fontSize="1.5rem" />}
+                label="LinkedIn"
+              />
+              <SocialIcon
+                href="https://github.com/DevJofre"
+                icon={<FaGithub fontSize="1.5rem" />} 
+                label="GitHub"
+              />
+              <SocialIcon
+                href="https://wa.me/47999570049"
+                icon={<FaWhatsapp fontSize="1.5rem" />} 
+                label="WhatsApp"
+              />
             </HStack>
           </Stack>
         </Stack>
