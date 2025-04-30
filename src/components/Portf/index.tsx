@@ -4,17 +4,17 @@ import { FaWhatsapp } from "react-icons/fa";
 const projects = [
   {
     id: 1,
-    image: "/public/site1.png",
+    image: "/site1.png", // sem "/public"
     link: "#",
   },
   {
     id: 2,
-    image: "/public/site2.png",
+    image: "/site2.png",
     link: "#",
   },
   {
     id: 3,
-    image: "/public/site3.png",
+    image: "/site3.png",
     link: "#",
   },
   {
@@ -34,11 +34,12 @@ const projects = [
   },
 ];
 
+
 export function Portfolio() {
     return (
       <Box textAlign="center" py={10}>
         <Heading as="h2" size="xl" mb={2}>
-          Portfólio
+          Teste
         </Heading>
         <Text mb={6}>Conheça alguns sites profissionais que já criamos</Text>
         <Flex
