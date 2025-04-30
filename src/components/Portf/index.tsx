@@ -38,7 +38,7 @@ export function Portfolio() {
     return (
       <Box textAlign="center" py={10}>
         <Heading as="h2" size="xl" mb={2}>
-          Nosso Portfólio
+          Teste
         </Heading>
         <Text mb={6}>Conheça alguns sites profissionais que já criamos</Text>
         <Flex
