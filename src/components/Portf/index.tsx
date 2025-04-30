@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 const projects = [
   {
     id: 1,
-    image: "/src/assets/site1.png",
+    image: "/public/site1.png",
     link: "#",
   },
   {

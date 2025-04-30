@@ -58,7 +58,7 @@ export function AboutUs () {
       {/* Imagem - Ajustado para tamanhos responsivos */}
       <Box maxW={{ base: "300px", md: "400px" }} width="100%" display={{ base: "none", md: "block" }}>
         <Image 
-          src="/src/assets/jofre.png" 
+          src="/public/jofre.png" 
           alt="Foto do Desenvolvedor de braços cruzados" 
           width="100%"
           height="auto"
