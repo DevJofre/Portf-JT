@@ -3,37 +3,37 @@ import { FaStar } from "react-icons/fa";
 
 const services = [
   {
-    title: "Site Institucional",
-    description: "Apresente sua empresa, serviços e produtos, permita que seu público te encontre facilmente na internet."
+    title: "C#",
+    description: "Utilizo C# com ASP.NET para criar aplicações web e APIs RESTful, integrando com banco de dados via Entity Framework. Já desenvolvi sistemas de controle financeiro, CRUDs e autenticação de usuários."
   },
   {
-    title: "Loja Virtual",
-    description: "Permita que seus clientes comprem seus produtos de onde estiverem, a qualquer hora do dia."
+    title: "TypeScript",
+    description: "Uso JavaScript no frontend manipulando o DOM, criando componentes dinâmicos e consumindo APIs. Apliquei em projetos com React para desenvolver interfaces interativas e responsivas."
   },
   {
-    title: "Landing Pages",
-    description: "Capture dados de leads potenciais, aumente suas vendas e melhore o ROI das suas campanhas de marketing."
+    title: "Python",
+    description: "Uso Python em projetos acadêmicos e pessoais para automações e análise de dados. Explorei bibliotecas como Pandas em estudos de ciência de dados."
   },
   {
-    title: "Portais de Notícia",
-    description: "Portais de notícias dinâmicos e informativos, com recursos avançados de pesquisa e categorização."
+    title: "Node.js",
+    description: "Com Node.js, desenvolvo backend e APIs, crio CRUDs e uso Express.js para agilizar o processo. Também integro com bancos de dados como MongoDB e MySQL, faço autenticação de usuários e faço o deploy em AWS e Docker."
   },
   {
-    title: "Site de Imobiliária",
-    description: "Aumente sua visibilidade online e seja encontrado por quem busca imóveis na sua região."
+    title: "Git",
+    description: "Utilizo Git para versionamento de código, criação de branches, merge de funcionalidades e controle de histórico de alterações. Trabalho com GitHub para hospedagem de repositórios, revisão de código (pull requests) e colaboração em equipe."
   },
   {
-    title: "Site Personalizado",
-    description: "Desenvolva soluções únicas para atender às suas necessidades específicas com design profissional e intuitivo."
+    title: "Metodologias Ágeis",
+    description: "Tenho experiência com metodologias ágeis (Scrum, Kanban) e ferramentas de gerenciamento de chamados (Jira, Trello) para organizar e acompanhar projetos."
   }
 ];
 
 export function WhatWeDo() {
   return (
     <Flex direction="column" align="center" p={10}>
-      <Heading size="xl" mb={4}>O que fazemos?</Heading>
+      <Heading size="xl" mb={4}>Habilidades Técnicas</Heading>
       <Text textAlign="center" maxW="600px" mb={8}>
-        Um site vai além de uma simples página na internet. Ele é a porta de entrada para o seu negócio, a vitrine que apresenta seus produtos ou serviços e a ferramenta poderosa para alcançar seus objetivos.
+      Ao longo da minha jornada como programador, desenvolvi um conjunto sólido de habilidades técnicas que me permitem criar soluções eficientes, escaláveis e seguras. Trabalho com foco no ecossistema .NET, mas também tenho experiência em outras tecnologias modernas do desenvolvimento web e backend. 
       </Text>
       <Flex wrap="wrap" justify="center" gap={8} maxW="900px" 
         sx={{
