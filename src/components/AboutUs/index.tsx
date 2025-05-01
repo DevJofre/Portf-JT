@@ -26,7 +26,7 @@ export function AboutUs () {
         alignItems="flex-start" 
       >
                 <Heading as="h2" size="xl" mb={4}>
-          Sobre Nós
+              Minha Jornada
         </Heading>
         <Button
           leftIcon={<FaStar />}
@@ -35,23 +35,18 @@ export function AboutUs () {
           mb={4}
           fontSize={{ base: "sm", md: "md" }}
         >
-          Seu parceiro para uma presença digital de sucesso!
+          Juntando conhecimento, prática e vontade de evoluir.
         </Button>
         <Text mb={4}>
-          Na <Highlight query="Criative Agência" styles={{ color: "purple.500", fontWeight: "bold" }}>
-            Criative Agência
-          </Highlight> acreditamos que um site é muito mais do que apenas uma página na web.
-          É a porta de entrada para o seu negócio, a primeira impressão que você causa em seus clientes
-          potenciais e a base para construir relacionamentos duradouros.
+          Meu nome é <Highlight query="Jofre Tomas," styles={{ color: "purple.500", fontWeight: "bold" }}>
+          Jofre Tomas,
+          </Highlight> sou natural de Salvador e curso Sistemas de Informação no IFC. Tenho experiência com desenvolvimento usando C#, .NET, React, TypeScript, Node.js, Python e Docker.
         </Text>
         <Text mb={4}>
-          Com uma equipe experiente e criativa, usamos as últimas tendências em design e desenvolvimento
-          para criar sites personalizados que atendem às suas necessidades e objetivos específicos.
-          Trabalhamos em estreita colaboração com você para entender sua visão e garantir que seu site
-          seja um reflexo fiel de sua marca.
+          Algumas habilidades que desenvolvi em projetos acadêmicos, pessoais e experiências práticas. Sou movido pela curiosidade e pela vontade constante de aprender, e estou sempre em busca de novos desafios para expandir meus horizontes como desenvolvedor e crescer na área de tecnologia.
         </Text>
         <Text fontWeight="bold" color="purple.500">
-          Estamos prontos para ajudá-lo a criar um site que você ame.
+          Explore o que já desenvolvi.
         </Text>
       </Box>
 

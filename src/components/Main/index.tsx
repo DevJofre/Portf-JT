@@ -65,7 +65,7 @@ function Main() {
           leftIcon={<i className="fas fa-cloud-download-alt"></i>}
           borderRadius="full"
         >
-          📂 Teste
+          📂 Currículo
         </Button>
       </Box>
     </Flex>
