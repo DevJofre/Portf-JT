@@ -19,17 +19,17 @@ const projects = [
   },
   {
     id: 4,
-    image: "/images/project1.jpg",
+    image: "/site-desenvolvimento.png",
     link: "#",
   },
   {
     id: 5,
-    image: "/images/project2.jpg",
+    image: "/site-desenvolvimento.png",
     link: "#",
   },
   {
     id: 6,
-    image: "/images/project3.jpg",
+    image: "/site-desenvolvimento.png",
     link: "#",
   },
 ];
@@ -41,7 +41,7 @@ export function Portfolio() {
         <Heading as="h2" size="xl" mb={2}>
           Portfólio
         </Heading>
-        <Text mb={6}>Conheça alguns sites profissionais que já criamos</Text>
+        <Text mb={6}>Confira meu portfólio de desenvolvimento</Text>
         <Flex
           wrap="wrap"
           justify="center"
@@ -60,7 +60,7 @@ export function Portfolio() {
         </Flex>
         <Box textAlign="center" mt={10} pb={10}>
             <Link
-                href="https://wa.me/seunumerodetelefone"
+                href="https://w.app/shcgkt"
                 isExternal
                 _hover={{ textDecoration: "none" }}
             >
@@ -80,7 +80,7 @@ export function Portfolio() {
                 }}
                 leftIcon={<Icon as={FaWhatsapp} />}
                 >
-                QUERO FAZER MEU SITE
+                Fale comigo no WhatsApp
                 </Button>
             </Link>
         </Box>
