@@ -3,23 +3,23 @@ import { Box, Heading, Accordion, AccordionItem, AccordionButton, AccordionPanel
 const faqItems = [
   {
     question: "Quem sou eu?",
-    answer: "Sou Jofre, um desenvolvedor full stack com experiência em frontend e backend. Trabalho com C#, React e diversas tecnologias modernas."
+    answer: "Sou Jofre, desenvolvedor full stack com ênfase em backend. Tenho experiência sólida com C# e .NET, criando APIs, sistemas web e integrações com bancos de dados. Também atuo no frontend com React e TypeScript, sempre buscando entregar soluções completas e bem estruturadas."
   },
   {
     question: "Quais tecnologias eu domino?",
-    answer: "Tenho experiência com HTML, CSS, JavaScript, TypeScript, React, C#, Python, Docker, Kubernetes, MySQL, PostgreSQL e muito mais."
+    answer: "Tenho domínio prático de C#, .NET, Node.js, TypeScript e React, com experiência em projetos reais.Além disso, possuo conhecimento acadêmico em Python, Angular e Java"
   },
   {
-    question: "Onde trabalho atualmente?",
-    answer: "Atualmente, sou programador júnior full stack na Acanto Labs."
+    question: "Atuação atual?",
+    answer: "Atualmente, atuo como programador júnior full stack, desenvolvendo soluções com foco em C#, .NET, React e TypeScript. Tenho contribuído em projetos reais, colaborando com equipes de desenvolvimento e lidando com desafios do dia a dia profissional."
   },
   {
     question: "Tenho experiência com computação em nuvem?",
-    answer: "Sim, possuo conhecimentos em Docker, Kubernetes e já explorei serviços de nuvem como AWS, Azure e GCP."
+    answer: "Sim, possuo conhecimentos em Docker e já explorei de forma limitada serviços de nuvem como AWS e Azure em projetos e estudos pessoais."
   },
   {
-    question: "Como posso ajudar no seu projeto?",
-    answer: "Posso desenvolver interfaces modernas e responsivas, criar APIs robustas e trabalhar em integrações entre frontend e backend."
+    question: "Quais habilidades levo para sua equipe?",
+    answer: "Gosto de trabalhar em equipe, aprender com os outros e contribuir para soluções que realmente façam a diferença. Tenho facilidade em entender problemas, me comunicar bem e buscar sempre a melhor forma de entregar valor em cada projeto."
   },
 ];
 
