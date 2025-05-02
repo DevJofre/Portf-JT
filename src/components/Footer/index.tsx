@@ -11,7 +11,7 @@ export default function Footer() {
           <Stack spacing={2} maxW="300px" align="center">
             <Image src="/logo3.0.png" alt="Criative Agência"  width="200px" height="69px" objectFit="contain" align="left" />
             <Text fontSize="sm" textAlign="center">
-              Somos especialistas em criar sites personalizados que convertem visitantes em leads e clientes.
+              Comprometido com a qualidade do código e a entrega de soluções que geram impacto positivo.
             </Text>
           </Stack>
 
@@ -20,11 +20,11 @@ export default function Footer() {
             <Text fontSize="lg" fontWeight="bold">CONTATO</Text>
             <HStack spacing={2}>
               <FaWhatsapp />
-              <Text>(47) 9 9293-2109</Text>
+              <Text>(47) 9 9957-0049</Text>
             </HStack>
             <HStack spacing={2}>
               <FaPhone />
-              <Text>(47) 9 9293-2109</Text>
+              <Text>(47) 9 9957-0049</Text>
             </HStack>
             <HStack spacing={2}>
               <FaEnvelope />
@@ -36,7 +36,7 @@ export default function Footer() {
           <Stack spacing={1} align="center">
             <Text fontSize="lg" fontWeight="bold">MENU</Text>
             <Link href="#">Início</Link>
-            <Link href="#">Nossas Soluções</Link>
+            <Link href="#">Tecnologias</Link>
             <Link href="#">Portfólio</Link>
             <Link href="#">Contato</Link>
           </Stack>
