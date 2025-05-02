@@ -1,5 +1,4 @@
-import { Box, Flex, Heading, Text, Highlight, Button, Image } from "@chakra-ui/react";
-import { FaStar } from "react-icons/fa";
+import { Box, Flex, Heading, Text, Highlight, Image } from "@chakra-ui/react";
 
 export function AboutUs () {
   return (
@@ -28,15 +27,6 @@ export function AboutUs () {
                 <Heading as="h2" size="xl" mb={4}>
               Minha Jornada
         </Heading>
-        <Button
-          leftIcon={<FaStar />}
-          variant="outline"
-          colorScheme="purple"
-          mb={4}
-          fontSize={{ base: "sm", md: "md" }}
-        >
-          Juntando conhecimento, prática e vontade de evoluir.
-        </Button>
         <Text mb={4}>
           Meu nome é <Highlight query="Jofre Tomas," styles={{ color: "purple.500", fontWeight: "bold" }}>
           Jofre Tomas,

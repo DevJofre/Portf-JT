@@ -28,7 +28,7 @@ export default function AnimatedIcons() {
         animate={{ x: ["100%", "-100%"] }}
         transition={{
           repeat: Infinity,
-          duration: 30,
+          duration: 10,
           ease: "linear",
         }}
       >
