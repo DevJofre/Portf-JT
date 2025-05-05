@@ -19,7 +19,11 @@ export function Navbar() {
       padding="1rem 2rem"
       bg="#301c3f"
       color="white"
-      position="relative"
+      position="fixed"  // fixa no topo
+      top="0"
+      left="0"
+      width="100%"
+      zIndex="1000"
     >
       {/* Logo */}
       <Image src="logo3.0.png" alt="Ícone JT" width="150px" height="50px" objectFit="contain" />

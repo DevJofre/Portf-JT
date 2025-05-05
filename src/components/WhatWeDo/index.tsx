@@ -30,7 +30,7 @@ const services = [
 
 export function WhatWeDo() {
   return (
-    <Flex direction="column" align="center" p={10}>
+    <Flex direction="column" align="center" p={20}>
       <Heading size="xl" mb={4}>Habilidades Técnicas</Heading>
       <Text textAlign="center" maxW="600px" mb={8}>
       Ao longo da minha jornada como programador, desenvolvi um conjunto sólido de habilidades técnicas que me permitem criar soluções eficientes, escaláveis e seguras. Trabalho com foco no ecossistema .NET, mas também tenho experiência em outras tecnologias modernas do desenvolvimento web e backend. 

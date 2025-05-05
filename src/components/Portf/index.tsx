@@ -37,7 +37,7 @@ const projects = [
 
 export function Portfolio() {
     return (
-      <Box textAlign="center" py={10}>
+      <Box textAlign="center" py={20}>
         <Heading as="h2" size="xl" mb={2}>
           Portfólio
         </Heading>

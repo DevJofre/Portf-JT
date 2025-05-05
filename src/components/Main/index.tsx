@@ -3,6 +3,7 @@ import { Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/react';
 function Main() {
   return (
     <Flex 
+      id="inicio"
       backgroundImage="url('/bannerhome.png')"
       backgroundSize="cover" 
       backgroundPosition="center top" 
@@ -14,10 +15,10 @@ function Main() {
       justify="center"
       px={6}
       flexDirection={{ base: "column", md: "row" }} 
-      gap={8} // Espaço entre elementos
+      gap={8}
+      pt="100px" // ✅ Adicionado para compensar a altura da navbar fixa
     >
-
-      {/* Imagem - Ajustado para tamanhos responsivos */}
+      {/* Imagem */}
       <Box maxW={{ base: "300px", md: "400px" }} width="100%">
         <Image 
           src="jofre.png" 
@@ -28,13 +29,13 @@ function Main() {
         />
       </Box>
 
-      {/* Conteúdo de texto - Removida altura fixa */}
+      {/* Conteúdo de texto */}
       <Box
         maxW="600px"
         width="100%"
         display="flex"
         flexDirection="column"
-        alignItems="flex-start" 
+        alignItems="flex-start"
       >
         <Text fontSize={["md", "lg"]} fontWeight="bold" color="white">
           Olá, Bem-vindo!
