@@ -8,15 +8,17 @@ function Main() {
       backgroundSize="cover" 
       backgroundPosition="center top" 
       backgroundRepeat="no-repeat"
-      align="center"
       w="100%"
-      minH={{ base: "auto", md: "68vh" }} 
+      minH={{ base: "calc(100vh - 80px)", md: "68vh" }} 
       maxH="700px"
       justify="center"
+      align={{ base: "flex-start", md: "center" }}
       px={6}
       flexDirection={{ base: "column", md: "row" }} 
       gap={8}
-      pt="100px" // ✅ Adicionado para compensar a altura da navbar fixa
+      pt="100px"
+      pb={{ base: 4, md: 0 }}
+      overflowY="auto"
     >
       {/* Imagem */}
       <Box maxW={{ base: "300px", md: "400px" }} width="100%">

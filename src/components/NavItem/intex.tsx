@@ -7,6 +7,7 @@ interface NavItemProps {
 export function NavItem({ children }: NavItemProps) {
   const idMap: { [key: string]: string } = {
     "INÍCIO": "inicio",
+    "HABILIDADES": "habilidades",
     "SOBRE": "sobre",
     "PORTFÓLIO": "portfolio",
     "PERGUNTAS": "faq",

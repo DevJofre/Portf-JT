@@ -61,6 +61,7 @@ export function Navbar() {
         zIndex="9"
       >
         <NavItem>INÍCIO</NavItem>
+        <NavItem>HABILIDADES</NavItem>
         <NavItem>SOBRE</NavItem>
         <NavItem>PORTFÓLIO</NavItem>
         <NavItem>PERGUNTAS</NavItem>

@@ -15,6 +15,7 @@ export function AboutUs () {
       px={6}
       flexDirection={{ base: "column", md: "row" }} 
       gap={8} // Espaço entre elementos
+      py={20}
     >
       {/* Conteúdo de texto - Removida altura fixa */}
       <Box

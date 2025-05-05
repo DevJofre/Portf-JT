@@ -16,7 +16,7 @@ function App() {
       <div id="inicio"><Main/></div>
       <AnimatedIcons/>
       <div id="sobre"><WhatWeDo/></div>
-      <div id="sobre-2"><AboutUs/></div>
+      <div id="habilidades"><AboutUs/></div>
       <div id="portfolio"><Portfolio/></div>
       <div id="faq"><FAQ/></div>
       <div id="contato"><ContactForm/></div>
