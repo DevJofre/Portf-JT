@@ -1,7 +1,13 @@
 import { Navbar } from "../components/Nav"
+import { ProjectCard } from "../components/Projects/projectCard"
+
 
 export const Projects: React.FC = () => {
     return(
-        <Navbar/>
+        <>
+            <Navbar/>
+            <ProjectCard/>
+        </>
+
     )
 }
