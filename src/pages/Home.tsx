@@ -14,8 +14,8 @@ export const Home: React.FC = () => {
             <Navbar/>
             <div id="inicio"><Main/></div>
             <AnimatedIcons/>
-            <div id="sobre"><WhatWeDo/></div>
-            <div id="habilidades"><AboutUs/></div>
+            <div id="habilidades"><WhatWeDo/></div>
+            <div id="sobre"><AboutUs/></div>
             <div id="portfolio"><Portfolio/></div>
             <div id="faq"><FAQ/></div>
             <div id="contato"><ContactForm/></div>
