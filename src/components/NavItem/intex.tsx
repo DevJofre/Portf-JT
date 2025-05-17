@@ -1,10 +1,14 @@
 import { Text } from "@chakra-ui/react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 interface NavItemProps {
   children: string;
 }
 
 export function NavItem({ children }: NavItemProps) {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const idMap: { [key: string]: string } = {
     "INÍCIO": "inicio",
     "HABILIDADES": "habilidades",
@@ -17,9 +21,17 @@ export function NavItem({ children }: NavItemProps) {
 
   const handleClick = () => {
     const sectionId = idMap[children];
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+
+    if (location.pathname === "/") {
+      // Já está na home, rola até a seção
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Salva a intenção no sessionStorage e redireciona
+      sessionStorage.setItem("scrollToSection", sectionId);
+      navigate("/");
     }
   };
 

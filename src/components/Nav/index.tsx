@@ -26,7 +26,16 @@ export function Navbar() {
       zIndex="1000"
     >
       {/* Logo */}
-      <Image src="logo3.0.png" alt="Ícone JT" width="150px" height="50px" objectFit="contain" />
+      <a href="/">
+      <Image
+        src="logo3.0.png"
+        alt="Ícone JT"
+        width="150px"
+        height="50px"
+        objectFit="contain"
+        cursor="pointer"
+        />
+      </a>
 
       {/* Botão Sanduíche */}
       <Button

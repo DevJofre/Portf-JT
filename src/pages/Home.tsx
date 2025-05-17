@@ -7,8 +7,19 @@ import { FAQ } from '../components/FAQ';
 import { ContactForm } from '../components/ContactUs';
 import Footer from '../components/Footer';
 import Main from '../components/Main';
+import { useEffect } from 'react';
 
 export const Home: React.FC = () => {
+      useEffect(() => {
+    const targetId = sessionStorage.getItem("scrollToSection");
+    if (targetId) {
+      const section = document.getElementById(targetId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+      sessionStorage.removeItem("scrollToSection");
+    }
+  }, []);
     return(
         <>
             <Navbar/>
