@@ -19,10 +19,10 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 
 const imageUrls = [
-  "/img1.jpg",
-  "/img2.jpg",
-  "/img3.jpg",
-  "/img4.jpg"
+  "/public/teste1.jpg",
+  "/public/teste2.png",
+  "/public/teste1.jpg",
+  "/public/teste2.png"
 ];
 
 export function ProjectCard() {
@@ -41,15 +41,15 @@ export function ProjectCard() {
     <Box
       bg="white"
       px={{ base: 4, md: 10, lg: 20 }}
-      py={{ base: 40, md: 20 }}
+      py={{ base: 10, md: 10 }}
       mx="auto"
       maxW="1200px"
       fontFamily="sans-serif"
       transition="all 0.2s"
     >
       {/* Título e categoria */}
-      <Flex justify="space-between" align="center" mb={4} wrap="wrap">
-        <Heading as="h3" size="sm" fontWeight="semibold">
+      <Flex justify="space-between" align="center" mb={8} mt={14} wrap="wrap">
+        <Heading as="h3" size="xl" fontWeight="semibold"  >
           Ocafin - Web Site
         </Heading>
         <Tag colorScheme="blue" size="sm" mt={{ base: 2, md: 0 }}>
@@ -85,18 +85,22 @@ export function ProjectCard() {
               objectFit="cover"
               cursor="pointer"
               onClick={() => openImage(index)}
+              transition="all 0.2s ease-in-out"
+              _hover={{
+                boxShadow: "lg",
+                border: "2px solid #e2e8f0",
+                transform: "scale(1.02)",
+              }}
             />
           ))}
         </Grid>
       </Flex>
 
-      {/* Descrição */}
-      <Text fontSize="sm" color="gray.600" mb={3} noOfLines={2}>
+      {/* Tecnologias */}
+      <Text fontSize="lg" color="Black" mb={5} fontWeight="semibold">
         Tecnologias Usadas:
       </Text>
-
-      {/* Tecnologias */}
-      <Stack direction="row" mb={3} flexWrap="wrap" spacing={2}>
+      <Stack direction="row" mb={6} flexWrap="wrap" spacing={2}>
         {['React', 'Chakra UI', 'Node.js', 'MongoDB'].map((tech) => (
           <Tag key={tech} size="sm" variant="subtle" colorScheme="gray">
             {tech}
@@ -104,23 +108,17 @@ export function ProjectCard() {
         ))}
       </Stack>
 
-      {/* Botão */}
-      <Box
-        mt={4}
-        py={2}
-        textAlign="center"
-        bg="black"
-        color="white"
-        borderRadius="md"
-        fontWeight="medium"
-        fontSize="sm"
-        cursor="pointer"
-        _hover={{ bg: "gray.800" }}
-      >
-        Ver detalhes
+      {/* Seção de descrição expandida */}
+      <Box mt={4}>
+        <Heading fontSize="xl" color="Black" mb={5} fontWeight="semibold">
+          Sobre o projeto
+        </Heading>
+        <Text fontSize="sm" color="gray.700">
+          Este projeto é um site institucional desenvolvido para a empresa Ocafin. Ele foi feito com foco em design moderno, responsividade e fácil navegação. Utiliza tecnologias modernas como React, Chakra UI, Node.js e MongoDB, integrando frontend e backend com eficiência.
+        </Text>
       </Box>
 
-      {/* Modal com imagem ampliada e setas */}
+      {/* Modal com imagem ampliada */}
       <Modal isOpen={isOpen} onClose={onClose} isCentered size="xl">
         <ModalOverlay />
         <ModalContent bg="transparent" boxShadow="none">
