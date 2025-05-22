@@ -39,7 +39,7 @@ export function ProjectCard() {
 
   return (
     <Box
-      bg="white"
+      bg="#f8f9fa"
       px={{ base: 4, md: 10, lg: 20 }}
       py={{ base: 10, md: 10 }}
       mx="auto"
