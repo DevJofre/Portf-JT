@@ -8,7 +8,7 @@ import { NavItem } from "../NavItem/intex"; // ajuste o caminho conforme seu pro
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isSmallerThan870] = useMediaQuery("(max-width: 870px)");
+  const [isSmallerThan870] = useMediaQuery("(max-width: 950px)");
 
   return (
     <Flex 
