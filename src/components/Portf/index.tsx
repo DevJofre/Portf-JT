@@ -1,21 +1,22 @@
-import { Box, Flex, Heading, Text, Image, Link, Button, Icon } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Image, Button, Icon } from "@chakra-ui/react";
 import { FaWhatsapp } from "react-icons/fa";
+import { Link as RouterLink } from "react-router-dom";
 
 const projects = [
   {
     id: 1,
     image: "/site1.png",
-    link: "#",
+    link: "http://localhost:5173/projetos/1",
   },
   {
     id: 2,
     image: "/site2.png",
-    link: "#",
+    link: "http://localhost:5173/projetos/2",
   },
   {
     id: 3,
     image: "/site3.png",
-    link: "#",
+    link: "http://localhost:5173/projetos/3",
   },
   {
     id: 4,
@@ -34,109 +35,122 @@ const projects = [
   },
 ];
 
-
 export function Portfolio() {
-    return (
-      <Box textAlign="center" py={20}>
-        <Heading as="h2" size="xl" mb={2}>
-          Portfólio
-        </Heading>
-        <Text mb={6}>Confira meu portfólio de desenvolvimento</Text>
-        <Flex
-          wrap="wrap"
-          justify="center"
-          gap={8}
-          maxW="900px"
-          mx="auto"
-          sx={{
-            "& > *": {
-              flexBasis: ["100%", "48%", "30%"], // 1 coluna no mobile, 2 no médio, 3 no grande
-            }
-          }}
+  return (
+    <Box textAlign="center" py={20}>
+      <Heading as="h2" size="xl" mb={2}>
+        Portfólio
+      </Heading>
+      <Text mb={6}>Confira meu portfólio de desenvolvimento</Text>
+
+      <Flex
+        wrap="wrap"
+        justify="center"
+        gap={8}
+        maxW="900px"
+        mx="auto"
+        sx={{
+          "& > *": {
+            flexBasis: ["100%", "48%", "30%"],
+          },
+        }}
+      >
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
+      </Flex>
+
+      <Box textAlign="center" mt={10} pb={10}>
+        <a
+          href="https://w.app/shcgkt"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </Flex>
-        <Box textAlign="center" mt={10} pb={10}>
-            <Link
-                href="https://w.app/shcgkt"
-                isExternal
-                _hover={{ textDecoration: "none" }}
-            >
-                <Button
-                bg="green.500"
-                color="white"
-                borderRadius="full"
-                px={6}
-                py={4}
-                fontSize="lg"
-                boxShadow="md"
-                transition="transform 0.3s ease-in-out"
-                _hover={{
-                    bg: "green.600",
-                    transform: "scale(1.05)", // Aumenta 5% ao passar o mouse
-                    boxShadow: "lg", // Aumenta a sombra para dar um efeito 3D
-                }}
-                leftIcon={<Icon as={FaWhatsapp} />}
-                >
-                Fale comigo no WhatsApp
-                </Button>
-            </Link>
-        </Box>
-      </Box>
-      
-    );
-  }
-  
-  function ProjectCard({ project }: { project: { image: string; link: string } }) {
-    return (
-      <Link href={project.link} isExternal _hover={{ textDecoration: "none" }}>
-        <Box
-          w="100%"
-          maxW="280px"
-          h="250px"
-          overflow="hidden"
-          position="relative"
-          borderRadius="lg"
-          borderWidth="1px"
-          boxShadow="md"
-          textAlign="center"
-          p={4}
-          mx="auto"
-          role="group"
-        >
-          <Box w="100%" h="100%" overflow="hidden" position="relative">
-            <Image
-              src={project.image}
-              alt="Projeto"
-              objectFit="cover"
-              w="100%"
-              h="auto"
-              position="absolute"
-              top="0"
-              transition="transform 7s ease-in-out"
-              _groupHover={{
-                transform: "translateY(-50%)",
-              }}
-            />
-          </Box>
-        </Box>
-        <Text
-            mt={3}
-            fontWeight="bold"
-            color="blue.500"
-            transition="all 0.3s ease-in-out"
+          <Button
+            bg="green.500"
+            color="white"
+            borderRadius="full"
+            px={6}
+            py={4}
+            fontSize="lg"
+            boxShadow="md"
+            transition="transform 0.3s ease-in-out"
             _hover={{
-                textDecoration: "underline",
-                textShadow: "2px 2px 5px rgba(0, 0, 255, 0.3)", // Sombra azul suave
+              bg: "green.600",
+              transform: "scale(1.05)",
+              boxShadow: "lg",
             }}
-            >
-            VER PROJETO
-            </Text>
-      </Link>
-    );
-  }
-  
-  
-  
+            leftIcon={<Icon as={FaWhatsapp} />}
+          >
+            Fale comigo no WhatsApp
+          </Button>
+        </a>
+      </Box>
+    </Box>
+  );
+}
+
+function ProjectCard({ project }: { project: { image: string; link: string } }) {
+  const isInternalLink = project.link !== "#";
+
+  const cardContent = (
+    <Box
+      w="100%"
+      maxW="280px"
+      h="250px"
+      overflow="hidden"
+      position="relative"
+      borderRadius="lg"
+      borderWidth="1px"
+      boxShadow="md"
+      textAlign="center"
+      p={4}
+      mx="auto"
+      role="group"
+      cursor={isInternalLink ? "pointer" : "not-allowed"}
+      opacity={isInternalLink ? 1 : 0.5}
+    >
+      <Box w="100%" h="100%" position="relative">
+        <Image
+          src={project.image}
+          alt="Projeto"
+          objectFit="cover"
+          w="100%"
+          h="auto"
+          position="absolute"
+          top="0"
+          transition="transform 7s ease-in-out"
+          _groupHover={{
+            transform: "translateY(-50%)",
+          }}
+        />
+      </Box>
+    </Box>
+  );
+
+  return isInternalLink ? (
+    <RouterLink to={project.link}>
+      {cardContent}
+      <Text
+        mt={3}
+        fontWeight="bold"
+        color="blue.500"
+        textAlign="center"
+        transition="all 0.3s ease-in-out"
+        _hover={{
+          textDecoration: "underline",
+          textShadow: "2px 2px 5px rgba(0, 0, 255, 0.3)",
+        }}
+      >
+        VER PROJETO
+      </Text>
+    </RouterLink>
+  ) : (
+    <Box>
+      {cardContent}
+      <Text mt={3} fontWeight="bold" color="gray.400" textAlign="center">
+        EM DESENVOLVIMENTO
+      </Text>
+    </Box>
+  );
+}

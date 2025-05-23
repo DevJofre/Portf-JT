@@ -1,17 +1,16 @@
-import { ContactForm } from "../components/ContactUs"
-import Footer from "../components/Footer"
-import { Navbar } from "../components/Nav"
-import { ProjectCard } from "../components/Projects/projectCard"
+import { Navbar } from "../components/Nav";
+import Footer from "../components/Footer";
+import { ProjectDetails } from "./ProjectDetails";
+import { ContactForm } from "../components/ContactUs";
 
 
-export const Projects: React.FC = () => {
-    return(
-        <>
-            <Navbar/>
-            <ProjectCard/>
-            <ContactForm/>
-            <Footer/>
-        </>
-
-    )
+export function LayoutProject() {
+  return (
+    <>
+      <Navbar />
+      <ProjectDetails />
+      <ContactForm />
+      <Footer />
+    </>
+  );
 }

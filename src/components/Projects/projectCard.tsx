@@ -18,14 +18,23 @@ import {
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 
-const imageUrls = [
-  "/public/teste1.jpg",
-  "/public/teste2.png",
-  "/public/teste1.jpg",
-  "/public/teste2.png"
-];
+interface ProjectCardProps {
+  title: string;
+  category: string;
+  videoUrl: string;
+  imageUrls: string[];
+  technologies: string[];
+  description: string;
+}
 
-export function ProjectCard() {
+export function ProjectCard({
+  title,
+  category,
+  videoUrl,
+  imageUrls,
+  technologies,
+  description,
+}: ProjectCardProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -38,43 +47,29 @@ export function ProjectCard() {
   const prevImage = () => setCurrentIndex((prev) => (prev - 1 + imageUrls.length) % imageUrls.length);
 
   return (
-    <Box
-      bg="#f8f9fa"
-      px={{ base: 4, md: 10, lg: 20 }}
-      py={{ base: 10, md: 10 }}
-      mx="auto"
-      maxW="1200px"
-      fontFamily="sans-serif"
-      transition="all 0.2s"
-    >
+    <Box maxW="1200px" mx="auto" px={6} py={10} pt={24} bg="gray.80">
       {/* Título e categoria */}
-      <Flex justify="space-between" align="center" mb={8} mt={14} wrap="wrap">
-        <Heading as="h3" size="xl" fontWeight="semibold"  >
-          Ocafin - Web Site
-        </Heading>
-        <Tag colorScheme="blue" size="sm" mt={{ base: 2, md: 0 }}>
-          <TagLabel>Web</TagLabel>
+      <Flex justify="space-between" align="center" mb={6} wrap="wrap">
+        <Heading as="h3" size="xl">{title}</Heading>
+        <Tag colorScheme="blue" size="sm">
+          <TagLabel>{category}</TagLabel>
         </Tag>
       </Flex>
 
-      {/* Vídeo + imagens pequenas */}
-      <Flex wrap="wrap" gap={4} mb={4} justify="space-between">
-        {/* Vídeo (iframe) */}
+      {/* Vídeo + imagens */}
+      <Flex wrap="wrap" gap={4} justify="space-between">
+        {/* Vídeo */}
         <Box
           as="iframe"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          src={videoUrl}
           flex={{ base: "1 1 100%", md: "1 1 60%" }}
-          h={{ base: "200px", md: "350px", lg: "450px" }}
+          h={{ base: "200px", md: "350px" }}
           borderRadius="lg"
           allowFullScreen
         />
 
-        {/* Imagens clicáveis */}
-        <Grid
-          templateColumns="repeat(2, 1fr)"
-          gap={4}
-          flex={{ base: "1 1 100%", md: "1 1 38%" }}
-        >
+        {/* Imagens */}
+        <Grid templateColumns="repeat(2, 1fr)" gap={4} flex="1 1 38%">
           {imageUrls.map((url, index) => (
             <Image
               key={index}
@@ -85,7 +80,6 @@ export function ProjectCard() {
               objectFit="cover"
               cursor="pointer"
               onClick={() => openImage(index)}
-              transition="all 0.2s ease-in-out"
               _hover={{
                 boxShadow: "lg",
                 border: "2px solid #e2e8f0",
@@ -97,28 +91,20 @@ export function ProjectCard() {
       </Flex>
 
       {/* Tecnologias */}
-      <Text fontSize="lg" color="Black" mb={5} fontWeight="semibold">
-        Tecnologias Usadas:
-      </Text>
-      <Stack direction="row" mb={6} flexWrap="wrap" spacing={2}>
-        {['React', 'Chakra UI', 'Node.js', 'MongoDB'].map((tech) => (
+      <Text mt={6} fontWeight="bold">Tecnologias Usadas:</Text>
+      <Stack direction="row" wrap="wrap" spacing={2} mb={4}>
+        {technologies.map((tech) => (
           <Tag key={tech} size="sm" variant="subtle" colorScheme="gray">
             {tech}
           </Tag>
         ))}
       </Stack>
 
-      {/* Seção de descrição expandida */}
-      <Box mt={4}>
-        <Heading fontSize="xl" color="Black" mb={5} fontWeight="semibold">
-          Sobre o projeto
-        </Heading>
-        <Text fontSize="sm" color="gray.700">
-          Este projeto é um site institucional desenvolvido para a empresa Ocafin. Ele foi feito com foco em design moderno, responsividade e fácil navegação. Utiliza tecnologias modernas como React, Chakra UI, Node.js e MongoDB, integrando frontend e backend com eficiência.
-        </Text>
-      </Box>
+      {/* Descrição */}
+      <Text fontWeight="bold" mt={4} mb={2}>Sobre o projeto:</Text>
+      <Text color="gray.700">{description}</Text>
 
-      {/* Modal com imagem ampliada */}
+      {/* Modal de imagem ampliada */}
       <Modal isOpen={isOpen} onClose={onClose} isCentered size="xl">
         <ModalOverlay />
         <ModalContent bg="transparent" boxShadow="none">
