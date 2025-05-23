@@ -91,17 +91,17 @@ export function ProjectCard({
       </Flex>
 
       {/* Tecnologias */}
-      <Text mt={6} fontWeight="bold">Tecnologias Usadas:</Text>
+      <Text mt={8} fontWeight="bold">Tecnologias Usadas:</Text>
       <Stack direction="row" wrap="wrap" spacing={2} mb={4}>
         {technologies.map((tech) => (
-          <Tag key={tech} size="sm" variant="subtle" colorScheme="gray">
+          <Tag key={tech} size="sm" mt={4} variant="subtle" colorScheme="gray">
             {tech}
           </Tag>
         ))}
       </Stack>
 
       {/* Descrição */}
-      <Text fontWeight="bold" mt={4} mb={2}>Sobre o projeto:</Text>
+      <Text fontWeight="bold" mt={8} mb={2}>Sobre o projeto:</Text>
       <Text color="gray.700">{description}</Text>
 
       {/* Modal de imagem ampliada */}
