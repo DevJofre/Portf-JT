@@ -73,8 +73,6 @@ export function Navbar() {
         <NavItem>HABILIDADES</NavItem>
         <NavItem>SOBRE</NavItem>
         <NavItem>PORTFÓLIO</NavItem>
-        <NavItem>PERGUNTAS</NavItem>
-        <NavItem>CONTATO</NavItem>
         <NavItem>FAQ</NavItem>
       </Flex>
 

@@ -4,7 +4,6 @@ import { WhatWeDo } from '../components/WhatWeDo';
 import { AboutUs } from '../components/AboutUs';
 import { Portfolio } from '../components/Portf';
 import { FAQ } from '../components/FAQ';
-import { ContactForm } from '../components/ContactUs';
 import Footer from '../components/Footer';
 import Main from '../components/Main';
 import { useEffect } from 'react';
@@ -29,7 +28,6 @@ export const Home: React.FC = () => {
             <div id="sobre"><AboutUs/></div>
             <div id="portfolio"><Portfolio/></div>
             <div id="faq"><FAQ/></div>
-            <div id="contato"><ContactForm/></div>
             <Footer/>
         </> 
     )
