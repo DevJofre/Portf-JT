@@ -3,13 +3,24 @@ import { FaWhatsapp, FaPhone, FaEnvelope, FaGithub, FaLinkedin } from "react-ico
 import { SocialIcon } from "../ButtonIcons/buttonIcon";
 
 export default function Footer() {
+  const handleNavigation = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    } else {
+      sessionStorage.setItem("scrollToSection", sectionId);
+      window.location.href = "/"; // redireciona para a Home se não estiver nela
+    }
+  };
+
   return (
     <Box bg="#250147" color="white" py={6}>
       <Container maxW="6xl">
         <Stack direction={{ base: "column", md: "row" }} justify="space-between" spacing={6} align="center">
+          
           {/* Logo e descrição */}
           <Stack spacing={2} maxW="300px" align="center">
-            <Image src="/logo3.0.png" alt="Criative Agência"  width="200px" height="69px" objectFit="contain" align="left" />
+            <Image src="/logo3.0.png" alt="Criative Agência" width="200px" height="69px" objectFit="contain" align="left" />
             <Text fontSize="sm" textAlign="center">
               Comprometido com a qualidade do código e a entrega de soluções que geram impacto positivo.
             </Text>
@@ -20,11 +31,11 @@ export default function Footer() {
             <Text fontSize="lg" fontWeight="bold">CONTATO</Text>
             <HStack spacing={2}>
               <FaWhatsapp />
-              <Text>(47) 9 9957-0049</Text>
+              <Text>(47) 9 9293-2109</Text>
             </HStack>
             <HStack spacing={2}>
               <FaPhone />
-              <Text>(47) 9 9957-0049</Text>
+              <Text>(47) 9 9293-2109</Text>
             </HStack>
             <HStack spacing={2}>
               <FaEnvelope />
@@ -35,10 +46,10 @@ export default function Footer() {
           {/* Menu */}
           <Stack spacing={1} align="center">
             <Text fontSize="lg" fontWeight="bold">MENU</Text>
-            <Link href="#">Início</Link>
-            <Link href="#">Tecnologias</Link>
-            <Link href="#">Portfólio</Link>
-            <Link href="#">Contato</Link>
+            <Link onClick={() => handleNavigation("inicio")}>Início</Link>
+            <Link onClick={() => handleNavigation("habilidades")}>Tecnologias</Link>
+            <Link onClick={() => handleNavigation("portfolio")}>Portfólio</Link>
+            <Link onClick={() => handleNavigation("contato")}>Contato</Link>
           </Stack>
 
           {/* Redes Sociais */}
@@ -62,6 +73,7 @@ export default function Footer() {
               />
             </HStack>
           </Stack>
+
         </Stack>
       </Container>
     </Box>
