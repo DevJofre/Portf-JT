@@ -28,13 +28,13 @@ export function Navbar() {
       {/* Logo */}
       <a href="/">
       <Image
-        src="logo3.0.png"
+        src="/logo3.0.png"
         alt="Ícone JT"
         width="150px"
         height="50px"
         objectFit="contain"
         cursor="pointer"
-        />
+      />
       </a>
 
       {/* Botão Sanduíche */}

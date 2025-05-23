@@ -6,7 +6,7 @@ import { Box, Flex } from "@chakra-ui/react";
 export function LayoutProject() {
   return (
     <Flex direction="column" minH="100vh">
-      <Navbar />
+      <Navbar/>
       <Box flex="1">
         <ProjectDetails />
       </Box>
