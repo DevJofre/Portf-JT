@@ -90,7 +90,7 @@ export function Navbar() {
             label="GitHub"
           />
           <SocialIcon
-            href="https://w.app/shcgkt"
+            href="https://wa.me/5547992728639?text=Oi%20sou%20o%20Jofre%2C%20como%20posso%20ajudar%3F"
             icon={<FaWhatsapp fontSize="1.5rem" />} 
             label="WhatsApp"
           />
