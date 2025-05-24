@@ -62,7 +62,7 @@ export function Portfolio() {
 
       <Box textAlign="center" mt={10} pb={10}>
         <a
-          href="https://w.app/shcgkt"
+          href="https://wa.me/5547992728639?text=Oi%20sou%20o%20Jofre%2C%20como%20posso%20ajudar%3F"
           target="_blank"
           rel="noopener noreferrer"
         >
