@@ -10,13 +10,13 @@ const projects = [
   },
   {
     id: 2,
-    image: "/site2.png",
-    link: "http://localhost:5173/projetos/2",
+    image: "/site-desenvolvimento.png",
+    link: "#",
   },
   {
     id: 3,
-    image: "/site3.png",
-    link: "http://localhost:5173/projetos/3",
+    image: "/site-desenvolvimento.png",
+    link: "#",
   },
   {
     id: 4,
