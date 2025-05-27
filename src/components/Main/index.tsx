@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { Box,Flex, Heading, Image, Text } from '@chakra-ui/react';
 
 function Main() {
   return (
@@ -23,7 +23,7 @@ function Main() {
       {/* Imagem */}
       <Box maxW={{ base: "300px", md: "400px" }} width="100%">
         <Image 
-          src="jofre.png" 
+          src="jofre2.svg" 
           alt="Foto do Desenvolvedor de braços cruzados" 
           width="100%"
           height="auto"
@@ -60,16 +60,6 @@ function Main() {
         >
           DESENVOLVEDOR FULL STACK
         </Text>
-        
-        <Button
-          mt={4}
-          colorScheme="blue"
-          size="lg"
-          leftIcon={<i className="fas fa-cloud-download-alt"></i>}
-          borderRadius="full"
-        >
-          📂 Currículo
-        </Button>
       </Box>
     </Flex>
   );
