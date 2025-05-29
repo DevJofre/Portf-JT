@@ -4,7 +4,7 @@ export const projects = [
     title: "Ocafin - Web Site",
     category: "Web",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    imageUrls: ["/public/teste1.jpg", "/public/teste2.png"],
+    imageUrls: ["/teste1.jpg", "/teste2.png"],
     technologies: ["React", "Chakra UI", "Node.js", "MongoDB"],
     description:
       "Site institucional desenvolvido com foco em design moderno e integração com backend.",
