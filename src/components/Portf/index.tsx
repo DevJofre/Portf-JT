@@ -6,7 +6,7 @@ const projects = [
   {
     id: 1,
     image: "/site1.png",
-    link: "http://localhost:5173/projetos/1",
+    link: "/projetos/1",
   },
   {
     id: 2,
