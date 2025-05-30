@@ -14,6 +14,8 @@ import {
   ModalContent,
   ModalBody,
   IconButton,
+  Button,
+  Link as ChakraLink,
 } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { useState } from "react";
@@ -25,6 +27,7 @@ interface ProjectCardProps {
   imageUrls: string[];
   technologies: string[];
   description: string;
+  githubUrl?: string; 
 }
 
 export function ProjectCard({
@@ -34,6 +37,7 @@ export function ProjectCard({
   imageUrls,
   technologies,
   description,
+  githubUrl,
 }: ProjectCardProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -56,7 +60,6 @@ export function ProjectCard({
         </Tag>
       </Flex>
 
-      {/* Vídeo + imagens */}
       <Flex wrap="wrap" gap={4} justify="space-between">
         {/* Vídeo */}
         <Box
@@ -68,7 +71,6 @@ export function ProjectCard({
           allowFullScreen
         />
 
-        {/* Imagens */}
         <Grid templateColumns="repeat(2, 1fr)" gap={4} flex="1 1 38%">
           {imageUrls.map((url, index) => (
             <Image
@@ -90,7 +92,6 @@ export function ProjectCard({
         </Grid>
       </Flex>
 
-      {/* Tecnologias */}
       <Text mt={8} fontWeight="bold">Tecnologias Usadas:</Text>
       <Stack direction="row" wrap="wrap" spacing={2} mb={4}>
         {technologies.map((tech) => (
@@ -100,11 +101,25 @@ export function ProjectCard({
         ))}
       </Stack>
 
-      {/* Descrição */}
       <Text fontWeight="bold" mt={8} mb={2}>Sobre o projeto:</Text>
       <Text color="gray.700">{description}</Text>
 
-      {/* Modal de imagem ampliada */}
+      {githubUrl && (
+        <Flex mt={10} gap={4} wrap="wrap" justify="center">
+          <ChakraLink href={githubUrl} isExternal>
+            <Button
+              size="lg"
+              px={8}
+              bg="#333"
+              color="white"
+              _hover={{ bg: "#444" }}
+            >
+              Ver no GitHub
+            </Button>
+          </ChakraLink>
+        </Flex>
+      )}
+
       <Modal isOpen={isOpen} onClose={onClose} isCentered size="xl">
         <ModalOverlay />
         <ModalContent bg="transparent" boxShadow="none">
